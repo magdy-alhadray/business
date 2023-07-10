@@ -1,0 +1,718 @@
+/* Start Variables */
+
+    :root {
+    --main-color: #eb252b;
+    --transparent-color: #08526d;
+  }
+
+/* End Variables */
+
+/* Start Global Rules  */
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    body {
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Work Sans', sans-serif;
+    }
+
+
+/* End Global Rules  */
+
+/* Start component  */
+
+    .line-left {
+        position: relative;
+        font-size: 18px;
+        padding-left: 52px ;
+        text-transform: uppercase;
+    }
+
+
+    .line-left::before {
+        content: "";
+        top:calc(50% - 1px) ;
+        left: 0;
+        border: 2px solid var(--main-color);
+        width: 40px;
+        position: absolute;
+    }
+
+    .text h1 {
+        text-transform: capitalize;
+        color:  var(--transparent-color);
+        font-size: 50px;
+        margin: 5px 0px;
+        font-weight: 600;
+    }
+
+
+    .text .title {
+        display: block;
+        font-weight: bold;
+        font-size: 50px;
+        color:var(--main-color);
+        margin-bottom: 8px;
+    }
+    
+
+    .main-p {
+        margin: 0;
+        font-size: 19px;
+        text-transform: capitalize;
+        color: #333;
+        line-height: 1.2;
+    } 
+
+
+    .btn {
+        padding: 0.5rem 1rem;
+        text-transform: capitalize;
+        color: #fff;
+    }
+
+
+    .btn:hover {
+        opacity: 0.6;
+    }
+
+
+    .btn1 {
+        background-color: var(--main-color);
+    }
+
+
+    .btn2 {
+        background-color: var(--transparent-color);
+    }
+
+/* component  */
+
+/* Intro  */
+
+    .landing {
+        width: 100%;
+        padding: 200px 0px;
+        background-image: url(../images/intro.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+
+    .landing .text {
+        width: 50%;
+    }
+
+
+   
+    
+    .landing .text .main-p {
+        margin-bottom: 50px;
+    } 
+
+    @media (max-width:767px){
+
+        .landing {
+            background-image: none;
+            background-color: #eff7fa;
+        }
+
+        .landing .text {
+            width: 100%;
+        }
+
+        .landing .text .top {
+            text-align: center;
+        }
+    }  
+
+/* Intro  */
+
+/* Cards  */
+
+    .cards {
+        position: relative;
+        top: -25px;
+    }
+
+
+    .cards .iteams .left  {
+        background-image: url(../images/about_1.jpg);
+        height: 350px;
+        background-size: cover;
+        padding: 20px;
+    }
+
+
+    .cards .iteams .center {
+        background-image: url(../images/about_2.jpg);
+        height: 350px;
+        background-size: cover;
+        padding: 20px;
+    }
+
+
+
+    .cards .iteams .right {
+        background-image: url(../images/about_3.jpg);
+        height: 350px;
+        background-size: cover;
+        padding: 20px; 
+    }
+
+
+
+    .cards .item .info {
+        margin-top: 110px;
+        margin-bottom: 10px;
+    }
+
+
+    .cards .item .line-left {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+
+    .cards .item h2 {
+        text-transform: capitalize;
+        color: var(--transparent-color);
+        font-size: 35px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+
+    .cards .item .main-p {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+
+    .cards .item .btn1 {
+        background-color: var(--main-color);
+    }
+
+/* Cards  */
+
+/* Consultancy */
+    .services .text .content h3,
+    .services .text .content .h2 {
+        text-transform: capitalize;
+        font-size: 35px;
+        margin: 7px 0px; 
+    }
+
+    .services .text .content h3 {
+        color: var(--transparent-color);
+    }
+
+
+    .services .text .content .h2 {
+        color: var(--main-color);
+    }
+
+    .services .row {
+        border-bottom: 1px solid #777;
+    }
+
+    .services h3 {
+        color: var(--transparent-color);
+        font-size: 30px;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+
+
+    .services .box svg {
+        color: var(--main-color);
+    }
+
+
+    @media (max-width:767px) {
+        .services .box {
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .services .box i {
+            margin: 0 0 30px;
+        }
+    }
+    
+/* Consultancy */
+
+.circular-progress {
+    position: relative;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background: conic-gradient(#eb252b 315deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.exper-icon .item h4 {
+    color: var(--transparent-color);
+    font-size: 25px;
+}
+
+.circular-progress img {
+    position: relative;
+}
+/* Experience   */   
+/* Reviews  */
+    .review {
+        width: 100%;
+        padding: 150px 0px;
+        background-image: url(../images/bgn-quotes.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .review .content h1 {
+        color: #fff;
+        margin: 0;
+       font-size: 50px;
+    }
+    
+    .review .box .img  img{
+        border-radius: 50%;
+        width: 170px;
+        height: 170px;
+    }
+
+    .review .box .text h3 {
+        color: var(--main-color);
+        text-transform: capitalize;
+    }
+    
+    .review .box .text p {
+        color: #fff;
+        text-transform: capitalize;
+    }
+    
+    .review .box .text svg {
+       color: var(--main-color);
+    }
+
+    .review .box .text span {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+
+    .review .box .text h5 {
+        color: #fff ;
+        text-transform: uppercase;
+        font-size: 21px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    
+
+/* Reviews  */
+/* Tech  */
+    .techs {
+        background-color: #eff7fa;;
+    }
+
+/* Tech  */
+/* CallBack  */
+
+    .callback .text {
+        border-bottom: 1px solid #777;
+    }
+    .callback .item  svg {
+        color: var(--main-color);
+        font-size: 60px;
+        margin-bottom: 15px;
+    }
+    .callback .item .one {
+        font-size: 30px;
+        font-weight: bold;
+        color: var(--transparent-color);
+        margin-bottom: 10px;
+    }
+
+/* CallBack  */
+/* our-work */
+
+    .line-li {
+        position: relative;
+        font-size: 18px;
+        padding-left: 52px ;
+        text-transform: uppercase;
+    }
+
+
+    .line-li::before {
+        content: "";
+        top:calc(50% - 1px) ;
+        left: -20px;
+        border: 2px solid var(--main-color);
+        width: 30px;
+        position: absolute;
+        top: 20px;
+    }
+
+    .our-work ul li {
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        font-size: 18px;
+        text-transform: capitalize;
+    }
+
+    @media (max-width:767px) {
+        .our-work ul li{
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 10px;
+            padding: 7px;
+        }
+    }    
+
+    .our-work ul li:not(.active):hover {
+        color: var(--red-color);
+    }
+
+    .our-work .box {
+        padding: 5px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+    }
+
+    .our-work .box .img-holder {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .our-work .box .img-holder::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .our-work .box .img-holder::after {
+        content:""; 
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-style: solid;
+        border-width: 0 0 170px 500px ;
+        border-color: transparent transparent white transparent;
+        transition: .5s;
+
+    }
+
+     .our-work .box:hover .img-holder::after {
+    border-width: 170px 500px 170px 0;
+    }
+
+     .our-work .img-holder .box .caption {
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    transition: 0.3s;
+    bottom: -100%;
+    }
+
+    .our-work .box .caption h5 {
+        color: var(--main-color);
+        font-size: 26px;
+    }
+/* our-work */    
+/*start contact us*/
+
+    .contact-us{
+        padding: 80px 0;
+        background-image: url(../images/bgn-quotes.jpg);
+        color: #fff; 
+        font-size: 22px;
+        width: 100%;
+    }
+
+    .contact-us p{
+        margin: 0;
+    }
+
+    @media(max-width:768px) {
+        .contact-us p{
+            margin-bottom: 30px;
+
+        }
+    }
+
+    .contact-us a{
+        color: #fff;
+        border: 2px solid #fff;
+        padding: 6px 15px 8px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    .contact-us .des {
+        font-size: 30px;
+        line-height: 1.5;
+    }
+/*end contactus*/
+/* Lastest News  */
+    .lastest .card-big {
+        width: 100%;
+        height: 400px;
+        padding: 20px; 
+        background-image: url(../images/about_2.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .lastest .card-big .element {
+        margin-top: 110px;
+        margin-bottom: 10px;
+    }
+
+    .lastest .element .line-left {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+
+    .lastest .element h4 {
+        text-transform: capitalize;
+        color: var(--transparent-color);
+        font-size: 35px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+
+   .lastest .element .main-p {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+    .lastest .element .card-btn {
+        color: var(--main-color);
+    }
+    .lastest .element .card-btn::after {
+        font-family: "FontAwesome";
+        content:"\f054" ;
+        margin-right: 5px;
+        font-size: 15px;
+        position: relative;
+        top: 0px;
+        right: -5px;
+
+    }
+    .lastest .card-big .upper {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 200px;
+        height: 130px;
+        border-style: solid;
+        border-width: 0 108px 130px 0px  ;
+        border-color: transparent white transparent transparent;
+    }
+
+    .lastest .card-big .upper span {
+        position: relative;
+        top: 2px;
+        right:-160px ;
+    }
+
+    .hold {
+        font-size: 30px;
+    }
+   
+
+    .lastest .card-small  {
+        background-color: #eff7fa;
+        width: 100%;
+        height: 400px;
+        padding: 20px;
+        position: relative;
+    }
+    .lastest .small {
+        margin-top: 110px;
+        margin-bottom: 10px;
+    }
+    .lastest .small .line-left {
+        font-size: 13px;
+        margin-bottom: 7px;
+    }
+
+    .lastest .small h6 {
+        text-transform: capitalize;
+        color: var(--transparent-color);
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 7px;
+    }
+
+
+   .lastest .small .main-p {
+        font-size: 15px;
+        margin-bottom: 7px;
+    }
+
+    .lastest .small .card-btn {
+        color: var(--main-color);
+    }
+
+    .lastest .small .card-btn::after {
+        font-family: "FontAwesome";
+        content:"\f054" ;
+        margin-right: 5px;
+        font-size: 15px;
+        position: relative;
+        top: -1px;
+        right: -5px;
+
+    }
+
+    .lastest .card-small .upper {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 200px;
+        height: 130px;
+        border-style: solid;
+        border-width: 0 108px 130px 0px  ;
+        border-color: transparent white transparent transparent;
+    }
+
+    .lastest .card-small .upper span {
+        position: relative;
+        top: 2px;
+        right:-160px ;
+    }
+
+    .hold {
+        font-size: 30px;
+    }
+/* Lastest News  */
+/* map  */
+    .map {
+        position: relative;
+    }
+    .map .top-map {
+        position: absolute;
+        bottom: 100px; 
+        background-color: #fff;
+        box-shadow: 0px 1px 20px 5px #888;
+        border-radius: 5px;
+        z-index: 3;
+        overflow: hidden;
+        margin-right: 10%;
+        
+        
+    }
+    .map .top-map h3 {
+        color: var(--transparent-color);
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+
+    .map .top-map .box svg  {
+        color: var(--main-color);
+    }
+/* map  */
+/* Footer  */
+    footer {
+        width: 100%;
+        padding: 100px 0px;
+        background-image: url(../images/bgn-quotes.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    footer .head {
+        color:  var(--main-color);
+        font-weight: 700;
+    }
+    footer .box .icon  {
+        color: var(--main-color);
+    }
+
+    footer .Social ul svg {
+        width: 20px;
+        height: 20px;
+    }
+    footer .facebook {
+        background-color: #1877f2;
+    }
+    footer .twitter {
+        background-color: #1da1f2;
+    }
+    footer .linkedin {
+        background-color: #0077b5;
+    }
+    footer .youtube {
+        background-color: #ff0000;
+    }
+
+/* Footer  */
+/*start copyright*/
+
+.copy-right{
+    padding: 20px;
+    background-color: var(--main-color);
+}
+.copy-right .name {
+    font-size: 22px;
+    color: var(--transparent-color);
+    font-weight: bold;
+}
+.copy-right ul{
+    margin: 0;
+}
+.copy-right ul li{
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 18px;
+
+}
+.copy-right ul li a{
+    color: #fff;
+}
+/* Copy Right  */
